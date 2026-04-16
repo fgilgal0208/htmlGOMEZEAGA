@@ -1,8 +1,8 @@
 # Migración Web: De WordPress a Arquitectura Estática (HTML5/CSS3)
 
-**Proyecto:** Desarrollo de sitio web para despacho jurídico (María Gómez Egea)  
+**Proyecto:** Desarrollo de sitio web para despacho jurídico
 **Empresa:** Taller Empresarial 2.0  
-**Contexto:** Prácticas Externas - Taller Empresarial 2  
+**Contexto:** Prácticas Profesionales (FEOE) - Taller Empresarial 2.0
 **Tecnologías:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+), FormSubmit.
 
 ## 1. Descripción del Proyecto
@@ -28,7 +28,11 @@ En lugar de utilizar alertas nativas del sistema, diseñé una **ventana modal d
 ## 3. Resultados Obtenidos
 1. **Rendimiento Máximo:** La web es ahora un sitio estático de carga instantánea.
 2. **Escalabilidad:** Código limpio y comentado, listo para ser mantenido o ampliado sin las restricciones de un CMS.
-3. **Flujo de Trabajo Profesional:** Demostración de prácticas de desarrollo reales, separando la lógica funcional de los datos sensibles (configuración de correo) para la entrega final al cliente.
+3. **Flujo de Trabajo Profesional:** Demostración de prácticas de desarrollo reales, separando la lógica funcional de los datos sensibles para la entrega final al cliente.
+
+---
+### **Propiedad Intelectual**
+**Nota:** Todos los derechos sobre el código fuente, el diseño y los materiales desarrollados en este proyecto pertenecen exclusivamente a **Taller Empresarial 2.0**. Queda prohibida su reproducción o uso sin autorización expresa de la empresa.
 
 ---
 *Proyecto desarrollado íntegramente en Córdoba (España) bajo la supervisión de Taller Empresarial 2.0.*
