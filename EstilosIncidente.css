@@ -1,111 +1,120 @@
-/* Clase de body para aplicar estilos generales de la página secundaria */
+/* Configuración General */
 body.pagina-secundaria {
-    background-color: #a3a3a3; /* Fondo gris igual que el índice */
-    color: white; /* Texto blanco igual que el índice */
-    text-align: center;
-    padding: 20px;
+    background-color: #a3a3a3; /* Gris original */
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-/* El nombre en cursiva */
-.script-header {
-    font-family: 'Alex Brush', cursive; /* La fuente cursiva que hemos enlazado */
-    font-size: 70px; /* Tamaño grande */
-    color: #fdfefe; /* Un blanco muy puro */
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: normal; /* Sin negrita para mayor elegancia */
+/* Cabecera */
+.header-secundario {
+    padding: 40px 0;
 }
 
-/* El subencabezado "El incidente" */
-.sub-header {
+.nombre-cursiva {
+    font-family: 'Alex Brush', cursive;
+    font-size: 70px; /* Tamaño grande original */
+    color: #ffffff; /* Blanco */
+    margin: 0;
+    font-weight: normal;
+}
+
+.titulo-pagina {
     font-size: 30px;
-    color: white;
+    color: #ffffff; /* Blanco */
     margin-top: 10px;
     margin-bottom: 50px;
     font-weight: normal;
+    text-transform: none; /* Mantener minúsculas si así es en el original */
 }
 
-/* Estilo para los párrafos de texto */
-.contenido-texto p {
-    color: #000;
-    text-align: left; /* Alineación a la izquierda */
-    font-size: 1.1rem;
-    line-height: 1.8; /* Buen interlineado */
+/* Contenido de Texto (¡NEGRO!) */
+
+.contenedor-texto-incidente {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido-texto p, 
+.contenido-texto ol li {
+    color: #000000;      /* Negro absoluto */
+    text-align: left;
+    
+    /* AJUSTES DE FUENTE */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 17px;     /* Tamaño estándar de WordPress */
+    font-weight: 400;    /* Grosor normal, sin negrita */
+    line-height: 1.7;    /* Interlineado amplio para legibilidad */
+    
+    margin-bottom: 24px; /* Separación entre párrafos */
+    letter-spacing: 0.2px; /* Espaciado sutil entre letras */
+}
+
+/* Ajuste específico para la lista de la Sentencia */
+.contenido-texto ol {
+    padding-left: 20px;
     margin-bottom: 25px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* El enlace de "Volver al inicio" con flecha */
-.back-link {
-    color: white;
-    text-decoration: underline; /* Subrayado */
-    font-size: 18px;
-    display: flex;
-    align-items: center; /* Alinea icono y texto */
-    justify-content: start; /* Texto a la izquierda */
-    gap: 8px; /* Espacio entre flecha y texto */
+/* Enlace Volver */
+.navegacion-retorno {
+    text-align: left;
     margin-top: 40px;
-    margin-bottom: 50px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 60px;
 }
 
-.back-link:hover {
-    opacity: 0.8; /* Efecto al pasar el ratón */
+.navegacion-retorno a {
+    color: #ffffff; /* Blanco */
+    text-decoration: underline;
+    font-size: 18px;
 }
 
-/* --- Cuadrícula de contacto inferior (Móvil y Dirección) --- */
-.contacto-grid {
-    display: flex; /* Flexbox para ponerlos uno al lado del otro */
-    justify-content: space-between; /* Espacio entre ellos */
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
+/* Cuadrícula de contacto (Bloques Blancos) */
+.contacto-grid-inferior {
+    display: flex;
+    justify-content: center;
     gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
 }
 
-/* Estilo para cada bloque blanco */
-.contacto-block {
+.contacto-card {
     background-color: white;
-    color: #555; /* Texto gris oscuro dentro */
-    flex: 1; /* Ocupan la mitad del ancho */
+    color: #555;
+    flex: 1;
     padding: 30px;
-    border-radius: 5px; /* Bordes redondeados sutiles */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-/* Iconos dentro de los bloques */
-.contacto-block i {
-    font-size: 30px; /* Tamaño del icono */
+.contacto-card i {
+    font-size: 30px;
     margin-bottom: 15px;
-    color: #666; /* Gris para el icono */
+    color: #666;
 }
 
-/* Texto de etiqueta "Móvil" o "Dirección" */
-.contacto-block p {
+.contacto-card .label {
     font-size: 16px;
     margin: 0;
     color: #555;
-    font-weight: normal;
+    text-transform: uppercase;
 }
 
-/* Añadir esto a EstilosIncidente.css para los datos de contacto */
-.contacto-block .dato {
+.contacto-card .dato {
     font-weight: bold;
     font-size: 15px;
-    margin: 5px 0 0 0;
-    color: #000; /* Negro para que resalte en el cuadro blanco */
+    margin: 10px 0 0 0;
+    color: #000000; /* Datos en negro */
 }
 
-/* Copia aquí también los estilos del footer para que se vean en esta página */
+/* Pie de Página (Unificado) */
 footer {
     background-color: #a3a3a3;
-    padding: 20px 40px;
-    margin-top: 50px;
+    padding: 60px 40px 40px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logos {
@@ -113,16 +122,42 @@ footer {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 40px auto;
 }
 
 .footer-logos img {
-    height: 55px;
+    height: 60px;
     width: auto;
+}
+
+.footer-legal {
+    color: white;
+    font-size: 12px;
 }
 
 .footer-legal a {
     color: white;
     text-decoration: underline;
-    font-size: 12px;
+    margin: 0 10px;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .contacto-grid-inferior, .footer-logos {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .nombre-cursiva {
+        font-size: 45px;
+    }
+}
+
+/* Animación de fundido suave para el contenido */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contenido-texto p, .contenido-texto ol {
+    animation: fadeIn 0.8s ease-out forwards;
 }

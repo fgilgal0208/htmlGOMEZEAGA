@@ -1,162 +1,174 @@
-/* 1. Configuración Global */
-body {
-    background-color: #a3a3a3; /* Color gris de fondo exacto */
-    color: white;             /* Texto blanco para todo el sitio */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0 20px;
+a {
+    text-decoration: none !important;
+}   
+
+/* 1. CONFIGURACIÓN GLOBAL */
+html {
+    scroll-behavior: smooth;
 }
 
-/* 2. Encabezados (Header) */
+body {
+    background-color: #a3a3a3; /* Gris corporativo original */
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 18px; /* Aumento de base para el zoom general */
+}
+
+/* 2. ANIMACIONES DE ENTRADA */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header, .texto-intro, .contenedor-imagenes, #contacto, #logo {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* 3. CABECERA */
 h1 {
-    font-size: 7rem;          /* Tamaño grande para el nombre */
-    font-weight: 500;         /* Letra fina/ligera */
+    font-family: 'Alex Brush', cursive;
+    font-size: 8rem; /* Zoom en el título principal */
+    font-weight: 400;
+    color: #ffffff;
     margin-top: 60px;
     margin-bottom: 0;
-    letter-spacing: -2px;
 }
 
 h5 {
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Zoom en el subtítulo */
     font-weight: 400;
+    color: #ffffff;
     margin-top: 10px;
     margin-bottom: 60px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-
-div p, ol {
-    max-width: 1300px;         
+/* 4. TEXTOS DE INTRODUCCIÓN */
+.texto-intro p, .texto-intro ol {
+    max-width: 1300px;
     margin: 25px auto;
-    text-align: left;        
-    line-height: 1.3;         
-    font-size: 0.9rem;
-    color:black;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #000000; /* Texto en negro como el original */
 }
 
-/* Espaciado específico para los puntos de la lista */
 ol li {
     margin-bottom: 25px;
     padding-left: 10px;
 }
 
-/* 4. Cuadrícula de Imágenes (Grid) */
+/* 5. ZOOM EN EL GRID DE IMÁGENES */
 .contenedor-imagenes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
-    gap: 60px 40px;                        /* Espacio: 60px arriba/abajo, 40px lados */
-    max-width: 1100px;
+    grid-template-columns: repeat(2, 1fr);
+    /* Ampliamos el ancho total para que las fotos se vean más grandes (Zoom) */
+    max-width: 1300px; 
+    /* Aumentamos el espacio entre ellas */
+    gap: 90px 70px; 
     margin: 80px auto;
-    justify-items: center;                 /* Centra los cuadros en su columna */
 }
 
-/* Estilo de cada cuadro (Imagen + Texto) */
-.contenedor-imagenes div {
+.cuadro-link {
+    text-decoration: none;
     width: 100%;
-    max-width: 450px;
+    color: inherit;
+    transition: transform 0.4s ease;
+}
+
+.cuadro-link:hover {
+    transform: scale(1.05); /* Zoom extra al pasar el ratón */
 }
 
 .contenedor-imagenes img {
     width: 100%;
     height: auto;
     display: block;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);  /* Sombra para efecto 3D */
-    transition: transform 0.3s ease;            /* Efecto suave al pasar el mouse */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Títulos debajo de las imágenes */
 .contenedor-imagenes p {
-    color: whi;
+    color: #ffffff;
     text-align: center;
-    font-size: 1.4rem;
-    margin-top: 20px;
-    letter-spacing: 3px;
-    text-transform: uppercase; /* Fuerza las mayúsculas */
+    /* Zoom en los títulos de las imágenes */
+    font-size: 2rem; 
+    margin-top: 25px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     font-weight: 300;
 }
 
-/* 5. Botón de Contacto */
+/* 6. ZOOM ESPECÍFICO EN EL BOTÓN DE CONTACTO */
 #contacto button {
-    background-color: white;
-    color: #333;
+    background-color: #ffffff;
+    color: #333333;
     border: none;
-    padding: 15px 45px;
-    font-size: 1.2rem;
+    /* Aumento del acolchado para que el botón sea más grande (Zoom) */
+    padding: 25px 80px; 
+    /* Zoom en la letra del botón */
+    font-size: 1.6rem; 
     font-weight: bold;
-    border-radius: 50px;      /* Botón ovalado */
+    border-radius: 60px;
     cursor: pointer;
-    margin: 20px 0;
-    text-decoration: underline; /* El subrayado que aparece en tu imagen */
-    transition: background-color 0.3s;
+    margin: 40px 0;
+    text-decoration: underline; /* Subrayado original */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #contacto button:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
+    transform: scale(1.05);
 }
 
-/* 6. Logo Final */
+/* 7. ZOOM EN EL LOGO FINAL */
 #logo img {
-    width: 100px;
-    margin: 10px 0 20px 0;
-    filter: brightness(0) invert(1); /* Si el logo es oscuro, lo vuelve blanco */
+    /* Zoom directo al tamaño del logo (de 100px a 160px) */
+    width: 160px; 
+    margin: 30px 0 50px 0;
+    /* Sin filtros para mantener el color negro original */
 }
 
-/* 7. Responsivo (Para móviles) */
-@media (max-width: 768px) {
-    .contenedor-imagenes {
-        grid-template-columns: 1fr; /* 1 sola columna en móviles */
-    }
-    h1 { font-size: 3rem; }
-}
-
-/* --- Estilos del Footer --- */
-
+/* 8. FOOTER UNIFICADO */
 footer {
-    background-color: #a3a3a3; /* Asegura el mismo gris que el resto */
-    padding: 60px 40px 20px 40px; /* Espaciado interno */
-    margin-top: 100px;
+    background-color: #a3a3a3;
+    padding: 60px 40px 20px 40px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Coloca un logo a la izquierda y otro a la derecha */
 .footer-logos {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    max-width: 1200px; /* Ancho máximo para que no se peguen a los bordes en pantallas enormes */
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto 40px auto;
 }
 
 .footer-logos img {
-    height: 65px; /* Tamaño similar al de la imagen */
+    height: 70px; /* Zoom ligero en logos del footer */
     width: auto;
-    filter: brightness(1.1); /* Ligero ajuste para que resalten más */
 }
 
-/* Estilo de los links de la parte inferior */
 .footer-legal {
-    text-align: center;
-    color: white;
+    color: #ffffff;
     font-size: 13px;
     letter-spacing: 1px;
 }
 
 .footer-legal a {
-    color: white;
+    color: #ffffff;
     text-decoration: underline;
-    margin: 0 5px;
-    transition: opacity 0.2s;
+    margin: 0 10px;
 }
 
-.footer-legal a:hover {
-    opacity: 0.7;
-}
-
-/* Ajuste para móviles: los logos se ponen uno debajo del otro */
+/* 9. AJUSTE MÓVIL */
 @media (max-width: 768px) {
-    .footer-logos {
-        flex-direction: column;
-        gap: 30px;
+    .contenedor-imagenes {
+        grid-template-columns: 1fr;
     }
+    h1 { font-size: 4rem; }
+    #contacto button { padding: 20px 50px; font-size: 1.3rem; }
 }
